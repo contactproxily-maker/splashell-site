@@ -70,3 +70,5 @@ footer nav{display:flex;gap:14px;flex-wrap:wrap}
   .hero .phone{width:min(100%,240px)}
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+.legal table th[scope=row]{white-space:nowrap;width:1%;text-transform:none;letter-spacing:0;font-size:15px;color:var(--ink)}
+.legal table.plain,.legal table.plain tbody{display:table;min-width:0}
