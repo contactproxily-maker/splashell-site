@@ -45,6 +45,10 @@ section{padding-block:48px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 6px 20px rgba(23,48,71,.06)}
 .card h3{margin-top:0}
+.card .strip{display:flex;justify-content:center;gap:8px;margin:0 0 14px;min-height:64px}
+.card .strip img{width:56px;height:56px;object-fit:contain;filter:drop-shadow(0 3px 4px rgba(0,0,0,.2))}
+.card .strip.worlds img{border-radius:12px;object-fit:cover;border:2px solid #fff;box-shadow:0 4px 10px rgba(23,48,71,.25)}
+footer small{display:block;margin-top:6px;opacity:.75}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold3)}
 .legal{background:#fff}
 .legal h2{font-size:22px}
