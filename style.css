@@ -15,6 +15,9 @@ h1,h2,h3{font-family:var(--display);letter-spacing:.005em;line-height:1.1;text-w
 h2{font-size:clamp(28px,4.2vw,44px)}
 h3{font-size:22px}
 p{margin:0 0 1em}
+/* Texte courant justifié (demande David), césure française pour éviter les rivières sur mobile */
+p,dd,.notice,.faq details p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+.eyebrow,.links,.hero-note,.updated,.sec-head .sub,.cta p,footer div,.steps h3,.glossary dt{text-align:left;hyphens:manual}
 .wrap{width:min(100% - 2*var(--gutter),1120px);margin-inline:auto}
 .narrow{width:min(100% - 2*var(--gutter),720px);margin-inline:auto}
 .eyebrow{font-family:var(--display);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold3);margin:0 0 10px}
