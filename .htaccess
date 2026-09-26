@@ -1,0 +1,15 @@
+# Splashell — hébergement OVH (Apache)
+AddDefaultCharset UTF-8
+Options -Indexes
+ErrorDocument 404 /index.html
+# URLs courtes utilisées par le jeu
+RewriteEngine On
+RewriteRule ^cgu/?$ /cgu.html [L]
+RewriteRule ^confidentialite/?$ /confidentialite.html [L]
+RewriteRule ^support/?$ /support.html [L]
+RewriteRule ^privacy/?$ /confidentialite.html [L]
+RewriteRule ^terms/?$ /cgu.html [L]
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
