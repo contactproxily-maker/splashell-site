@@ -118,6 +118,7 @@ p,dd,.notice,.faq details p{text-align:justify;text-justify:inter-word;hyphens:a
 .cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .cta h2{font-size:clamp(24px,3vw,32px);margin-bottom:.2em}
 .cta p{margin:0;color:var(--muted);max-width:52ch}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn-gold{display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#E4AE35);color:#3A2600;font-family:var(--display);font-weight:600;font-size:18px;padding:13px 28px;border-radius:14px;text-decoration:none;box-shadow:0 4px 0 var(--gold3),0 10px 20px rgba(0,0,0,.3);transition:transform .12s;white-space:nowrap}
 .btn-gold:hover{transform:translateY(-1px)}
 .btn-gold:active{transform:translateY(2px);box-shadow:0 2px 0 var(--gold3)}
