@@ -168,15 +168,24 @@ footer nav{display:flex;gap:6px 18px;flex-wrap:wrap}
   .news-extras{grid-template-columns:1fr}
 }
 @media (max-width:720px){
-  .top .wrap{flex-direction:column;align-items:flex-start;gap:6px}
-  .top nav{margin-left:-10px}
-  .top nav a{font-size:13px;padding:6px 10px}
+  /* Mobile (03/10/2026) : menu sur une seule ligne défilante, texte du héros aligné à gauche sans césure, blocs plus aérés */
+  .top .wrap{flex-direction:column;align-items:stretch;gap:4px;padding-block:8px 6px}
+  .top nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:calc(-1*var(--gutter));padding-inline:calc(var(--gutter) - 8px);gap:0;scroll-snap-type:x proximity}
+  .top nav::-webkit-scrollbar{display:none}
+  .top nav a{font-size:14px;padding:7px 10px;white-space:nowrap;flex:none;scroll-snap-align:start}
   .hero{background-image:url(assets/monde2.jpg);background-position:center 30%}
-  .hero .wrap{grid-template-columns:1fr;gap:8px;padding-block:32px 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:8px;padding-block:28px 40px}
   .hero-text{padding-bottom:0}
-  .hero .logo{width:min(100%,320px);margin-left:0}
-  .hero .lead{font-size:17px}
-  .hero-phone{width:min(70%,240px);margin-top:28px}
+  .hero .logo{width:min(100%,300px);margin:0 auto}
+  .new-pill{font-size:14px;margin-top:10px}
+  .hero .lead{font-size:16.5px;line-height:1.5;text-align:left;hyphens:manual;-webkit-hyphens:manual;max-width:none;margin:10px 0 18px}
+  .badges{gap:8px}
+  .badge{flex:1 1 calc(50% - 8px);min-width:0;justify-content:center;padding:8px 10px 9px}
+  .hero-note{font-size:13px;margin-top:12px}
+  .hero-follow{margin-top:14px}
+  .hero .follow-t{width:100%}
+  .social-hero a{padding:8px 14px 8px 11px;font-size:14px}
+  .hero-phone{width:min(68%,230px);margin:26px auto 0}
   .how,.worlds,.bestiary,.account,.news{padding-block:56px 48px}
   .news-shots{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70%,230px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;justify-content:start}
   .news-shots figure{scroll-snap-align:start}
