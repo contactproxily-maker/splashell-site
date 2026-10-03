@@ -1,0 +1,29 @@
+# Splashell
+
+> Splashell est un jeu mobile de match-3 gratuit, en français, dans un lagon lumineux : on aligne perles, coraux, coquillages, poissons-clowns, étoiles de mer et hippocampes à travers 67 mondes sous-marins et 1 005 niveaux. Édité par AVYQA (David Bartolomeu, Agde, France). Disponible sur iPhone (App Store) et Android (Google Play), avec achats intégrés facultatifs.
+
+## Liens officiels
+
+- Site : https://splashell.com/
+- App Store (iOS) : https://apps.apple.com/fr/app/splashell/id6816626143
+- Google Play (Android) : https://play.google.com/store/apps/details?id=com.avyqa.splashell
+- Facebook : https://www.facebook.com/profile.php?id=61594609360746
+- Instagram : https://www.instagram.com/splashell/
+- TikTok : https://www.tiktok.com/@splashell
+
+## Le jeu
+
+- Mécaniques : alignements de 3, 4 ou 5 pièces, pièces rayées, enchâssées et prisme, combinaisons, cascades.
+- Objectifs : score, sable à dégager, collecte, coffres à faire descendre, commandes, bébés tortues à libérer.
+- Obstacles : sable, rochers, filets, algues, oursins, bénitiers, encre, crabes, courants.
+- 67 mondes (plage, lagon de corail, grotte de cristal, épave, abysses, récif de nuit, cité engloutie, banquise, volcan sous-marin, source chaude, anémones, kelp, récif arc-en-ciel, mangrove, palais de nacre, repaire des pirates, baie des tortues, grand récif…).
+- Vies qui se rechargent, boosters (marteau, échange, mélange), cadeau quotidien, Pass Lagon mensuel, série de victoires.
+- Gratuit, sans publicité imposée ; vidéos bonus facultatives à partir de la version 1.2.
+
+## Pages utiles
+
+- Support et questions fréquentes : https://splashell.com/support.html
+- Politique de confidentialité : https://splashell.com/confidentialite.html
+- Conditions d'utilisation : https://splashell.com/cgu.html
+- Mentions légales : https://splashell.com/mentions-legales.html
+- Contact : contact@avyqa.fr
