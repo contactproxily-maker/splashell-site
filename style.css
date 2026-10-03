@@ -170,7 +170,8 @@ footer nav{display:flex;gap:6px 18px;flex-wrap:wrap}
 @media (max-width:720px){
   /* Mobile (03/10/2026) : menu sur une seule ligne défilante, texte du héros aligné à gauche sans césure, blocs plus aérés */
   .top .wrap{flex-direction:column;align-items:stretch;gap:4px;padding-block:8px 6px}
-  .top nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:calc(-1*var(--gutter));padding-inline:calc(var(--gutter) - 8px);gap:0;scroll-snap-type:x proximity}
+  .top nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;min-width:0;width:calc(100% + 2*var(--gutter));max-width:none;margin-inline:calc(-1*var(--gutter));padding-inline:calc(var(--gutter) - 8px);gap:0;scroll-snap-type:x proximity;box-sizing:border-box}
+  html,body{overflow-x:clip}
   .top nav::-webkit-scrollbar{display:none}
   .top nav a{font-size:14px;padding:7px 10px;white-space:nowrap;flex:none;scroll-snap-align:start}
   .hero{background-image:url(assets/monde2.jpg);background-position:center 30%}
