@@ -193,5 +193,8 @@ footer nav{display:flex;gap:6px 18px;flex-wrap:wrap}
 .social a{display:inline-flex;align-items:center;gap:7px;padding:7px 13px 7px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--title);text-decoration:none;font-weight:700;font-size:14px;line-height:1;transition:background .15s,border-color .15s,transform .15s}
 .social a:hover{background:var(--sand2);border-color:var(--gold3);transform:translateY(-1px)}
 .social .ico{width:18px;height:18px;fill:currentColor;flex:none}
-.follow-cta{width:100%;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.hero-follow{margin-top:18px;gap:8px 12px}
+.hero .follow-t{color:rgba(255,255,255,.85);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.social-hero a{background:rgba(7,33,58,.42);border-color:rgba(255,255,255,.45);color:#fff;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.social-hero a:hover{background:rgba(255,255,255,.18);border-color:#fff}
 @media (max-width:720px){.foot-right{align-items:flex-start}}
