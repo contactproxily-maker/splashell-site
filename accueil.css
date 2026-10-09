@@ -199,3 +199,11 @@
 .home footer .social a{background:rgba(255,255,255,.06);border-color:var(--trait);color:#fff}
 .home footer .social a:hover{background:rgba(246,207,106,.14);border-color:var(--or2)}
 @media (max-width:720px){.home .glossary dd,.home .steps p{text-align:left}}
+
+/* Réseaux dans le héros */
+.heros .hero-follow{margin-top:16px;gap:8px 12px}
+.heros .follow-t{color:rgba(255,255,255,.9);text-shadow:0 1px 6px rgba(0,40,60,.5)}
+.heros .social-hero a{background:rgba(7,62,88,.35);border-color:rgba(255,255,255,.5);color:#fff}
+.heros .social-hero a:hover{background:rgba(255,255,255,.2);border-color:var(--or1)}
+.heros .note-heros{color:rgba(255,255,255,.85)}
+@media (max-width:720px){.heros .follow-t{width:100%}}

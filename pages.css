@@ -1,0 +1,49 @@
+/* Splashell — pages secondaires (support, confidentialité, conditions, mentions légales, 404) aux tons lagon,
+   assorties à l'accueil 2.0. Chargée après style.css ; le texte reste sur une carte nacrée pour la lecture. */
+.page{
+  --lagon-a:#1FB5C9; --lagon-b:#1592B1; --lagon-c:#0E719A; --lagon-d:#0D6385; --lagon-e:#0A4D6C;
+  --or1:#FFF3C7; --or2:#F6CF6A; --or4:#9E6A12;
+  --or-grad:linear-gradient(160deg,#FFF6D2 0%,#E9B44C 22%,#FFF0B8 44%,#C88A26 63%,#FFE9A8 82%,#B97A1C 100%);
+  --trait:rgba(255,231,163,.28);
+  background:var(--lagon-d);
+}
+
+/* En-tête : verre lagon */
+.page .top{background:rgba(7,62,88,.78);border-bottom:1px solid var(--trait);box-shadow:0 8px 30px rgba(0,30,50,.25)}
+.page .top .brand{color:#fff}
+.page .top nav a{color:rgba(255,255,255,.85)}
+.page .top nav a:hover,.page .top nav a[aria-current]{background:rgba(255,231,163,.14);color:var(--or1)}
+
+/* Fond du contenu : dégradé lagon et décor sous-marin, comme le haut de l'accueil */
+.page main,.page > section.legal{position:relative;isolation:isolate}
+.page .legal{padding-block:clamp(36px,6vw,72px) clamp(56px,8vw,96px);overflow:hidden;
+  background:radial-gradient(90% 40% at 72% 0%,rgba(140,240,240,.5),transparent 60%),radial-gradient(70% 40% at 0% 60%,rgba(20,190,190,.3),transparent 60%),
+    linear-gradient(180deg,var(--lagon-a) 0%,var(--lagon-b) 22%,var(--lagon-c) 60%,var(--lagon-d) 100%)}
+.page .legal::before{content:'';position:absolute;inset:0;z-index:-1;background:url(assets/hero-wide.jpg) center top/cover no-repeat;opacity:.38;mix-blend-mode:soft-light;pointer-events:none}
+
+/* Carte nacrée au liseré doré */
+.page .legal .narrow{background:linear-gradient(180deg,#FFFDF7,#FFF8EC);border-radius:28px;padding:clamp(24px,4.5vw,52px);
+  box-shadow:0 0 0 2px rgba(246,207,106,.85),0 0 0 6px rgba(255,255,255,.18),0 30px 70px rgba(0,40,70,.35)}
+.page .legal .eyebrow{color:#C98F1E}
+.page .legal h1{color:var(--lagon-c)}
+.page .legal h2{color:#0A7282}
+.page .notice{background:#FFF6DC}
+
+/* Pied de page lagon */
+.page footer{background:var(--lagon-e);color:rgba(255,255,255,.7);border-top:1px solid var(--trait)}
+.page footer strong{color:#fff}
+.page footer a{color:var(--or1)}
+.page footer .follow-t{color:rgba(255,255,255,.85)}
+.page footer .social a{background:rgba(255,255,255,.08);border-color:var(--trait);color:#fff}
+.page footer .social a:hover{background:rgba(246,207,106,.16);border-color:var(--or2)}
+
+/* Page introuvable */
+.perdu{text-align:center}
+.perdu .logo{width:min(100%,340px);margin:0 auto 6px}
+.perdu h1{margin-bottom:.3em}
+.perdu p{text-align:center;hyphens:manual;max-width:46ch;margin-inline:auto}
+.perdu .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+
+@media (max-width:720px){
+  .page .legal .narrow{width:calc(100% - 24px);border-radius:22px}
+}
