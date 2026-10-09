@@ -1,16 +1,16 @@
 /* Splashell — page d'accueil premium (version 2.0). Chargée après style.css, uniquement sur index.html.
-   Univers du jeu : abysses bleu nuit, nacre, or, lagon turquoise. Cadres dorés comme les réels 2.0. */
+   Univers du jeu : lagon turquoise et bleu, nacre, or, lagon turquoise. Cadres dorés comme les réels 2.0. */
 .home{
-  --abyss:#041627; --abyss2:#06223C; --abyss3:#0A3354; --nacre-t:#FFF8EC;
+  --abyss:#0A4D6C; --abyss2:#0D6385; --abyss3:#11809F; --nacre-t:#FFF8EC;
   --or1:#FFF3C7; --or2:#F6CF6A; --or3:#D79A2B; --or4:#9E6A12;
   --or-grad:linear-gradient(160deg,#FFF6D2 0%,#E9B44C 22%,#FFF0B8 44%,#C88A26 63%,#FFE9A8 82%,#B97A1C 100%);
-  --verre:rgba(10,40,66,.55); --trait:rgba(255,231,163,.22);
+  --verre:rgba(8,74,104,.55); --trait:rgba(255,231,163,.22);
   background:var(--abyss);
 }
 .home main{display:block}
 
 /* ---------- En-tête : verre sombre ---------- */
-.home .top{background:rgba(4,22,39,.72);border-bottom:1px solid var(--trait);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.home .top{background:rgba(7,62,88,.72);border-bottom:1px solid var(--trait);box-shadow:0 8px 30px rgba(0,0,0,.25)}
 .home .top .brand{color:#fff}
 .home .top nav a{color:rgba(255,255,255,.82)}
 .home .top nav a:hover{background:rgba(255,231,163,.12);color:var(--or1)}
@@ -35,25 +35,25 @@
 .appareil{position:relative;margin:0;width:min(100%,300px);aspect-ratio:9/19.5;border-radius:38px;padding:7px;background:var(--or-grad);
   box-shadow:0 0 0 2px rgba(10,42,71,.9),0 30px 70px rgba(0,8,24,.6),0 0 60px rgba(246,207,106,.12)}
 .appareil::after{content:'';position:absolute;inset:7px;border-radius:31px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5),inset 0 0 26px rgba(0,20,50,.35);pointer-events:none}
-.appareil > img,.appareil > video,.appareil > picture,.appareil > picture img{display:block;width:100%;height:100%;object-fit:cover;border-radius:31px;background:#06223C}
+.appareil > img,.appareil > video,.appareil > picture,.appareil > picture img{display:block;width:100%;height:100%;object-fit:cover;border-radius:31px;background:#0D6385}
 .appareil.v916{aspect-ratio:9/16}
 .appareil.mini{width:min(100%,190px);border-radius:28px;padding:5px}
 .appareil.mini::after{inset:5px;border-radius:23px}
 .appareil.mini > video,.appareil.mini > img{border-radius:23px}
 .etiquette{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);white-space:nowrap;font-family:var(--display);font-weight:600;font-size:15px;color:#fff;
-  background:rgba(4,22,39,.92);border:2px solid var(--or2);border-radius:999px;padding:6px 16px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+  background:rgba(7,62,88,.92);border:2px solid var(--or2);border-radius:999px;padding:6px 16px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
 
 /* ---------- Héros ---------- */
 .heros{position:relative;overflow:hidden;isolation:isolate;color:#fff;padding:clamp(36px,6vw,80px) 0 0;
-  background:radial-gradient(120% 70% at 75% 0%,rgba(34,195,214,.35),transparent 60%),linear-gradient(180deg,#073457 0%,var(--abyss2) 55%,var(--abyss) 100%)}
-.heros::before{content:'';position:absolute;inset:0;z-index:-2;background:url(assets/hero-wide.jpg) center 30%/cover no-repeat;opacity:.38;mix-blend-mode:luminosity}
+  background:radial-gradient(90% 60% at 72% 0%,rgba(140,240,240,.55),transparent 60%),radial-gradient(70% 60% at 0% 100%,rgba(20,190,190,.35),transparent 60%),linear-gradient(180deg,#1FB5C9 0%,#1592B1 40%,#0E719A 75%,var(--abyss2) 100%)}
+.heros::before{content:'';position:absolute;inset:0;z-index:-2;background:url(assets/hero-wide.jpg) center 30%/cover no-repeat;opacity:.42;mix-blend-mode:soft-light}
 .heros::after{content:'';position:absolute;inset:-20% -10% auto;height:120%;z-index:-1;pointer-events:none;
   background:conic-gradient(from 200deg at 70% -10%,transparent 0deg,rgba(255,243,199,.10) 8deg,transparent 16deg,rgba(255,243,199,.08) 26deg,transparent 34deg,rgba(255,243,199,.06) 48deg,transparent 60deg);
   animation:rayons 14s ease-in-out infinite alternate}
 @keyframes rayons{to{transform:translateX(4%) rotate(2deg);opacity:.7}}
 .heros .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:center}
 .heros .logo{width:min(100%,470px);margin:0 0 4px -3%;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55))}
-.pastille{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:6px 16px 6px 6px;border-radius:999px;background:rgba(4,22,39,.6);border:1px solid var(--trait);
+.pastille{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:6px 16px 6px 6px;border-radius:999px;background:rgba(7,62,88,.6);border:1px solid var(--trait);
   font-family:var(--display);font-weight:600;font-size:15px;color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);text-align:left;hyphens:manual}
 .pastille b{background:var(--or-grad);color:#3A2600;border-radius:999px;padding:4px 12px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;white-space:nowrap}
 .heros .chapeau{font-size:clamp(18px,1.8vw,21px);line-height:1.55;color:rgba(255,255,255,.88);max-width:44ch;margin:0 0 26px;text-align:left;hyphens:manual}
@@ -79,14 +79,14 @@
   animation:monte var(--d,12s) linear var(--r,0s) infinite;left:var(--x,50%)}
 @keyframes monte{to{transform:translate(var(--dx,20px),-110vh)}}
 .chiffres{list-style:none;margin:clamp(40px,6vw,72px) 0 0;padding:20px var(--gutter);display:flex;justify-content:center;flex-wrap:wrap;gap:12px 0;
-  border-top:1px solid var(--trait);background:rgba(4,22,39,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  border-top:1px solid var(--trait);background:rgba(7,62,88,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .chiffres li{display:flex;align-items:baseline;gap:8px;padding:0 clamp(14px,2.4vw,34px);color:rgba(255,255,255,.75);font-weight:700;font-size:15px;border-left:1px solid var(--trait)}
 .chiffres li:first-child{border-left:0}
 .chiffres b{font:600 clamp(22px,2.4vw,30px)/1 var(--display);color:var(--or2)}
 
 /* ---------- Nouveautés 2.0 : rangées alternées ---------- */
 .nouveautes{position:relative;padding:clamp(72px,9vw,120px) 0 clamp(56px,7vw,96px);color:#fff;
-  background:radial-gradient(80% 50% at 15% 10%,rgba(34,195,214,.16),transparent 60%),radial-gradient(70% 50% at 90% 60%,rgba(246,207,106,.08),transparent 60%),var(--abyss)}
+  background:radial-gradient(80% 50% at 15% 10%,rgba(60,220,225,.28),transparent 60%),radial-gradient(70% 40% at 90% 55%,rgba(60,220,225,.18),transparent 60%),linear-gradient(180deg,var(--abyss2) 0%,var(--abyss) 45%,#0C5A7C 100%)}
 .rangee{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center;margin-bottom:clamp(80px,10vw,130px)}
 .rangee:last-child{margin-bottom:0}
 .rangee.inverse .visuel{order:2}
@@ -119,7 +119,7 @@
 
 /* ---------- Bande-annonce ---------- */
 .film{position:relative;padding:clamp(72px,9vw,120px) 0;color:#fff;overflow:hidden;
-  background:linear-gradient(180deg,var(--abyss) 0%,#062B47 50%,var(--abyss) 100%)}
+  background:linear-gradient(180deg,var(--abyss2) 0%,#0F7396 50%,var(--abyss) 100%)}
 .film .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:center}
 .film .appareil{width:min(100%,330px);justify-self:center}
 .film .appareil video{background:#000}
@@ -135,7 +135,7 @@
 
 /* ---------- Appel final ---------- */
 .appel{position:relative;overflow:hidden;color:#fff;padding:clamp(64px,8vw,104px) 0;text-align:center;
-  background:radial-gradient(60% 80% at 50% 0%,rgba(246,207,106,.18),transparent 60%),linear-gradient(180deg,#062B47,var(--abyss))}
+  background:radial-gradient(60% 80% at 50% 0%,rgba(246,207,106,.18),transparent 60%),linear-gradient(180deg,#0F7396,var(--abyss))}
 .appel img.mascotte{width:clamp(70px,8vw,100px);margin:0 auto 10px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.5))}
 .appel h2{color:#fff;font-size:clamp(30px,4.4vw,52px);margin-bottom:.25em}
 .appel p{color:rgba(255,255,255,.8);text-align:center;hyphens:manual;max-width:52ch;margin:0 auto 26px}
@@ -147,7 +147,7 @@
 
 /* ---------- Fenêtre de la bande-annonce ---------- */
 .lecteur{border:0;padding:0;background:transparent;max-width:min(92vw,420px);width:100%}
-.lecteur::backdrop{background:rgba(2,10,20,.82);backdrop-filter:blur(6px)}
+.lecteur::backdrop{background:rgba(4,40,60,.82);backdrop-filter:blur(6px)}
 .lecteur .appareil{width:100%;max-height:86vh;margin:0 auto}
 .lecteur .fermer{position:absolute;top:-14px;right:-14px;z-index:3;width:42px;height:42px;border-radius:50%;border:2px solid var(--or2);background:var(--abyss);color:#fff;font-size:22px;cursor:pointer}
 
