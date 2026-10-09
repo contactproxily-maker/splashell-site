@@ -1,0 +1,201 @@
+/* Splashell — page d'accueil premium (version 2.0). Chargée après style.css, uniquement sur index.html.
+   Univers du jeu : abysses bleu nuit, nacre, or, lagon turquoise. Cadres dorés comme les réels 2.0. */
+.home{
+  --abyss:#041627; --abyss2:#06223C; --abyss3:#0A3354; --nacre-t:#FFF8EC;
+  --or1:#FFF3C7; --or2:#F6CF6A; --or3:#D79A2B; --or4:#9E6A12;
+  --or-grad:linear-gradient(160deg,#FFF6D2 0%,#E9B44C 22%,#FFF0B8 44%,#C88A26 63%,#FFE9A8 82%,#B97A1C 100%);
+  --verre:rgba(10,40,66,.55); --trait:rgba(255,231,163,.22);
+  background:var(--abyss);
+}
+.home main{display:block}
+
+/* ---------- En-tête : verre sombre ---------- */
+.home .top{background:rgba(4,22,39,.72);border-bottom:1px solid var(--trait);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.home .top .brand{color:#fff}
+.home .top nav a{color:rgba(255,255,255,.82)}
+.home .top nav a:hover{background:rgba(255,231,163,.12);color:var(--or1)}
+.home .top .nav-cta{background:var(--or-grad);color:#3A2600;margin-left:6px;box-shadow:0 2px 0 var(--or4)}
+.home .top .nav-cta:hover{color:#3A2600;filter:brightness(1.06)}
+
+/* ---------- Titres de section au style du jeu ---------- */
+.surtitre{display:inline-flex;align-items:center;gap:14px;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--or2);margin:0 0 14px;text-align:left}
+.surtitre::before,.surtitre::after{content:'';width:42px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--or2))}
+.surtitre::after{background:linear-gradient(270deg,transparent,var(--or2))}
+.tete{max-width:760px;margin:0 auto 54px;text-align:center}
+.tete h2{color:#fff;font-size:clamp(32px,4.6vw,54px);font-weight:600;letter-spacing:-.01em;text-shadow:0 4px 0 rgba(0,0,0,.25),0 18px 40px rgba(0,0,0,.35)}
+.tete p{color:rgba(255,255,255,.78);font-size:clamp(17px,1.6vw,20px);text-align:center;hyphens:manual;margin:0 auto;max-width:58ch}
+.clair .tete h2{color:var(--title);text-shadow:none}
+.clair .tete p{color:var(--muted)}
+.clair .surtitre{color:var(--or3)}
+.clair .surtitre::before{background:linear-gradient(90deg,transparent,var(--or3))}
+.clair .surtitre::after{background:linear-gradient(270deg,transparent,var(--or3))}
+.or{background:var(--or-grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+
+/* ---------- Appareil au cadre doré (vidéo ou capture) ---------- */
+.appareil{position:relative;margin:0;width:min(100%,300px);aspect-ratio:9/19.5;border-radius:38px;padding:7px;background:var(--or-grad);
+  box-shadow:0 0 0 2px rgba(10,42,71,.9),0 30px 70px rgba(0,8,24,.6),0 0 60px rgba(246,207,106,.12)}
+.appareil::after{content:'';position:absolute;inset:7px;border-radius:31px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.5),inset 0 0 26px rgba(0,20,50,.35);pointer-events:none}
+.appareil > img,.appareil > video,.appareil > picture,.appareil > picture img{display:block;width:100%;height:100%;object-fit:cover;border-radius:31px;background:#06223C}
+.appareil.v916{aspect-ratio:9/16}
+.appareil.mini{width:min(100%,190px);border-radius:28px;padding:5px}
+.appareil.mini::after{inset:5px;border-radius:23px}
+.appareil.mini > video,.appareil.mini > img{border-radius:23px}
+.etiquette{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);white-space:nowrap;font-family:var(--display);font-weight:600;font-size:15px;color:#fff;
+  background:rgba(4,22,39,.92);border:2px solid var(--or2);border-radius:999px;padding:6px 16px;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+
+/* ---------- Héros ---------- */
+.heros{position:relative;overflow:hidden;isolation:isolate;color:#fff;padding:clamp(36px,6vw,80px) 0 0;
+  background:radial-gradient(120% 70% at 75% 0%,rgba(34,195,214,.35),transparent 60%),linear-gradient(180deg,#073457 0%,var(--abyss2) 55%,var(--abyss) 100%)}
+.heros::before{content:'';position:absolute;inset:0;z-index:-2;background:url(assets/hero-wide.jpg) center 30%/cover no-repeat;opacity:.38;mix-blend-mode:luminosity}
+.heros::after{content:'';position:absolute;inset:-20% -10% auto;height:120%;z-index:-1;pointer-events:none;
+  background:conic-gradient(from 200deg at 70% -10%,transparent 0deg,rgba(255,243,199,.10) 8deg,transparent 16deg,rgba(255,243,199,.08) 26deg,transparent 34deg,rgba(255,243,199,.06) 48deg,transparent 60deg);
+  animation:rayons 14s ease-in-out infinite alternate}
+@keyframes rayons{to{transform:translateX(4%) rotate(2deg);opacity:.7}}
+.heros .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:center}
+.heros .logo{width:min(100%,470px);margin:0 0 4px -3%;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55))}
+.pastille{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:6px 16px 6px 6px;border-radius:999px;background:rgba(4,22,39,.6);border:1px solid var(--trait);
+  font-family:var(--display);font-weight:600;font-size:15px;color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);text-align:left;hyphens:manual}
+.pastille b{background:var(--or-grad);color:#3A2600;border-radius:999px;padding:4px 12px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.heros .chapeau{font-size:clamp(18px,1.8vw,21px);line-height:1.55;color:rgba(255,255,255,.88);max-width:44ch;margin:0 0 26px;text-align:left;hyphens:manual}
+.heros .chapeau strong{color:#fff}
+.actions-heros{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.bouton-video{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:12px;
+  padding:10px 18px 10px 12px;font:600 16px/1.1 var(--display);cursor:pointer;transition:background .2s,border-color .2s}
+.bouton-video:hover{background:rgba(255,231,163,.14);border-color:var(--or2)}
+.bouton-video i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--or-grad);color:#3A2600;font-style:normal;font-size:12px;padding-left:2px;box-shadow:0 2px 0 var(--or4)}
+.heros .badge{background:#000;border-color:rgba(255,255,255,.35)}
+.note-heros{font-size:14px;color:rgba(255,255,255,.65);margin:16px 0 0;text-align:left}
+.scene-heros{position:relative;justify-self:center;width:min(100%,340px);padding-bottom:30px}
+.scene-heros .appareil{width:100%}
+.flotte{position:absolute;width:clamp(48px,6vw,78px);filter:drop-shadow(0 10px 14px rgba(0,0,0,.45));pointer-events:none;will-change:transform}
+.flotte.f1{left:-18%;top:12%;animation:flotte 6s ease-in-out infinite}
+.flotte.f2{right:-14%;top:34%;animation:flotte 7s ease-in-out -2s infinite}
+.flotte.f3{left:-10%;bottom:16%;animation:flotte 8s ease-in-out -4s infinite}
+.flotte.f4{right:-16%;bottom:8%;width:clamp(40px,5vw,62px);animation:flotte 6.5s ease-in-out -1s infinite}
+@keyframes flotte{50%{transform:translateY(-14px) rotate(6deg)}}
+.bulles{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bulles span{position:absolute;bottom:-40px;width:var(--t,14px);height:var(--t,14px);border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.9),rgba(160,235,255,.25) 40%,rgba(160,235,255,.05) 70%);border:1px solid rgba(255,255,255,.25);
+  animation:monte var(--d,12s) linear var(--r,0s) infinite;left:var(--x,50%)}
+@keyframes monte{to{transform:translate(var(--dx,20px),-110vh)}}
+.chiffres{list-style:none;margin:clamp(40px,6vw,72px) 0 0;padding:20px var(--gutter);display:flex;justify-content:center;flex-wrap:wrap;gap:12px 0;
+  border-top:1px solid var(--trait);background:rgba(4,22,39,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.chiffres li{display:flex;align-items:baseline;gap:8px;padding:0 clamp(14px,2.4vw,34px);color:rgba(255,255,255,.75);font-weight:700;font-size:15px;border-left:1px solid var(--trait)}
+.chiffres li:first-child{border-left:0}
+.chiffres b{font:600 clamp(22px,2.4vw,30px)/1 var(--display);color:var(--or2)}
+
+/* ---------- Nouveautés 2.0 : rangées alternées ---------- */
+.nouveautes{position:relative;padding:clamp(72px,9vw,120px) 0 clamp(56px,7vw,96px);color:#fff;
+  background:radial-gradient(80% 50% at 15% 10%,rgba(34,195,214,.16),transparent 60%),radial-gradient(70% 50% at 90% 60%,rgba(246,207,106,.08),transparent 60%),var(--abyss)}
+.rangee{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center;margin-bottom:clamp(80px,10vw,130px)}
+.rangee:last-child{margin-bottom:0}
+.rangee.inverse .visuel{order:2}
+.visuel{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:clamp(14px,2vw,26px);min-height:200px}
+.visuel .halo{position:absolute;inset:8% 4%;z-index:0;border-radius:50%;background:radial-gradient(closest-side,rgba(34,195,214,.32),transparent);filter:blur(10px)}
+.visuel > *:not(.halo){position:relative;z-index:1}
+.visuel .appareil:nth-child(3){transform:translateY(-34px)}
+.texte h3{font-size:clamp(28px,3.2vw,40px);color:#fff;font-weight:600;margin-bottom:.35em}
+.texte > p{color:rgba(255,255,255,.8);font-size:clamp(16.5px,1.4vw,18.5px);max-width:50ch;text-align:left;hyphens:manual}
+.puces{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.puces li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.85);font-size:16px}
+.puces li::before{content:'';flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--or-grad);box-shadow:0 0 0 3px rgba(246,207,106,.15)}
+.ornement{width:clamp(70px,8vw,104px);margin:0 0 6px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45))}
+
+/* Les 10 jeux bonus */
+.jeux{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.jeux li{display:flex;align-items:center;gap:12px;padding:8px 12px 8px 8px;border-radius:14px;background:var(--verre);border:1px solid var(--trait);font:600 15.5px/1.2 var(--display);color:#fff}
+.jeux img{width:44px;height:44px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
+.mini-rail{display:flex;justify-content:center;gap:clamp(14px,2.4vw,30px);margin-top:clamp(48px,6vw,70px);flex-wrap:wrap}
+.mini-rail figure{margin:0;display:flex;flex-direction:column;align-items:center}
+
+/* Cartes (défi du jour, nuit, carte) */
+.cartes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(80px,10vw,120px)}
+.carte{position:relative;border-radius:26px;padding:26px 24px 28px;background:linear-gradient(180deg,rgba(14,74,110,.55),rgba(6,34,60,.7));border:1px solid var(--trait);
+  box-shadow:0 20px 50px rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+.carte::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:var(--or-grad)}
+.carte .appareil{width:min(100%,200px);margin-bottom:22px}
+.carte h3{color:#fff;font-size:24px;margin-bottom:.3em}
+.carte p{color:rgba(255,255,255,.75);font-size:16px;margin:0;text-align:center;hyphens:manual}
+
+/* ---------- Bande-annonce ---------- */
+.film{position:relative;padding:clamp(72px,9vw,120px) 0;color:#fff;overflow:hidden;
+  background:linear-gradient(180deg,var(--abyss) 0%,#062B47 50%,var(--abyss) 100%)}
+.film .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:center}
+.film .appareil{width:min(100%,330px);justify-self:center}
+.film .appareil video{background:#000}
+.film .texte .actions-heros{margin-top:26px}
+
+/* ---------- Sections claires (comment jouer, glossaire, compte) ---------- */
+.home .how,.home .bestiary{background:linear-gradient(180deg,var(--nacre-t),#FBF1DC)}
+.home .account{background:var(--nacre-t)}
+.home .steps .phone,.home .account .phone{border:0;padding:6px;background:var(--or-grad);border-radius:34px;box-shadow:0 0 0 2px rgba(10,42,71,.85),0 22px 48px rgba(7,33,58,.28)}
+.home .steps .phone img,.home .account .phone img{border-radius:28px}
+.home .worlds{background:radial-gradient(70% 60% at 50% 0%,rgba(34,195,214,.25),transparent 60%),linear-gradient(180deg,var(--abyss2),var(--abyss))}
+.home .world-strip li{border:2px solid rgba(246,207,106,.5)}
+
+/* ---------- Appel final ---------- */
+.appel{position:relative;overflow:hidden;color:#fff;padding:clamp(64px,8vw,104px) 0;text-align:center;
+  background:radial-gradient(60% 80% at 50% 0%,rgba(246,207,106,.18),transparent 60%),linear-gradient(180deg,#062B47,var(--abyss))}
+.appel img.mascotte{width:clamp(70px,8vw,100px);margin:0 auto 10px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.5))}
+.appel h2{color:#fff;font-size:clamp(30px,4.4vw,52px);margin-bottom:.25em}
+.appel p{color:rgba(255,255,255,.8);text-align:center;hyphens:manual;max-width:52ch;margin:0 auto 26px}
+.appel .badges{justify-content:center}
+.home footer{background:var(--abyss);color:rgba(255,255,255,.6);border-top:1px solid var(--trait)}
+.home footer strong{color:#fff}
+.home footer a{color:var(--or1)}
+.home .follow-t{color:rgba(255,255,255,.7)}
+
+/* ---------- Fenêtre de la bande-annonce ---------- */
+.lecteur{border:0;padding:0;background:transparent;max-width:min(92vw,420px);width:100%}
+.lecteur::backdrop{background:rgba(2,10,20,.82);backdrop-filter:blur(6px)}
+.lecteur .appareil{width:100%;max-height:86vh;margin:0 auto}
+.lecteur .fermer{position:absolute;top:-14px;right:-14px;z-index:3;width:42px;height:42px;border-radius:50%;border:2px solid var(--or2);background:var(--abyss);color:#fff;font-size:22px;cursor:pointer}
+
+/* ---------- Apparitions (GSAP ; sans script, tout reste visible) ---------- */
+.js-anim .apparait{opacity:0;transform:translateY(28px)}
+
+@media (prefers-reduced-motion:reduce){
+  .heros::after,.flotte,.bulles span{animation:none}
+  .bulles{display:none}
+  .js-anim .apparait{opacity:1;transform:none}
+}
+
+/* ---------- Tablettes et téléphones ---------- */
+@media (max-width:980px){
+  .heros .wrap,.rangee,.film .wrap{grid-template-columns:1fr}
+  .rangee.inverse .visuel{order:0}
+  .heros .wrap{text-align:left}
+  .scene-heros{width:min(78%,300px);margin-top:10px}
+  .cartes{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
+  .texte{max-width:640px}
+}
+@media (max-width:720px){
+  .home .top nav .nav-cta{margin-left:4px}
+  .heros .logo{width:min(100%,320px);margin:0 auto 4px}
+  .pastille{font-size:14px}
+  .heros .chapeau{font-size:17px}
+  .actions-heros .badge{flex:1 1 calc(50% - 8px)}
+  .bouton-video{width:100%;justify-content:center}
+  .flotte.f1,.flotte.f3{left:-6%}
+  .flotte.f2,.flotte.f4{right:-6%}
+  .chiffres{gap:10px 0;padding-block:16px}
+  .chiffres li{font-size:13px;padding:0 12px}
+  .tete{margin-bottom:38px}
+  .visuel{gap:10px}
+  .visuel .appareil{width:min(46%,210px)}
+  .visuel .appareil:only-of-type,.visuel .appareil.seul{width:min(70%,260px)}
+  .visuel .appareil:nth-child(3){transform:translateY(-20px)}
+  .jeux{grid-template-columns:1fr 1fr;gap:8px}
+  .jeux li{font-size:14px;gap:8px;padding:6px 8px 6px 6px}
+  .jeux img{width:36px;height:36px}
+  .mini-rail{gap:12px}
+  .mini-rail{flex-wrap:nowrap}.mini-rail figure{flex:1 1 0;min-width:0}.mini-rail .appareil.mini{width:100%}
+  .etiquette{font-size:12.5px;padding:5px 11px}
+  .film .appareil{width:min(78%,300px)}
+}
+
+/* Pied de page sombre : boutons des réseaux */
+.home footer .follow-t{color:rgba(255,255,255,.85)}
+.home footer .social a{background:rgba(255,255,255,.06);border-color:var(--trait);color:#fff}
+.home footer .social a:hover{background:rgba(246,207,106,.14);border-color:var(--or2)}
+@media (max-width:720px){.home .glossary dd,.home .steps p{text-align:left}}
